@@ -1,58 +1,64 @@
 package com.bridgelabz.addressBook;
 
+import java.util.Comparator;
+
 public class Contacts {
 
-	private final String firstName;
-	private final String lastName;
-	private final String address;
-	private final String city;
-	private final String state;
-	private final int zip;
-	private final long phoneNo;
-	private final String email;
+    public static Comparator<Contacts> ConNameComparator = (s1, s2) -> {
+        String ContactName1 = s1.getFirstName().toUpperCase();
+        String ContactName2 = s2.getFirstName().toUpperCase();
+        return ContactName1.compareTo(ContactName2);
+    };
 
-	public Contacts(String myFirstName, String myLastName, String myAddress, String myCity, String myState, int myZip,
-			long myPhoneNo, String myEmail) {
-		firstName = myFirstName;
-		lastName = myLastName;
-		address = myAddress;
-		city = myCity;
-		state = myState;
-		zip = myZip;
-		phoneNo = myPhoneNo;
-		email = myEmail;
-	}
+    private final String firstName;
+    private final String lastName;
+    private final String address;
+    private final String city;
+    private final String state;
+    private final int zip;
+    private final long phoneNo;
+    private final String email;
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public Contacts(String myFirstName, String myLastName, String myAddress, String myCity, String myState, int myZip, long myPhoneNo, String myEmail) {
+        firstName = myFirstName;
+        lastName = myLastName;
+        address = myAddress;
+        city = myCity;
+        state = myState;
+        zip = myZip;
+        phoneNo = myPhoneNo;
+        email = myEmail;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public int getZip() {
-		return zip;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public long getPhoneNo() {
-		return phoneNo;
-	}
+    public int getZip() {
+        return zip;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public long getPhoneNo() {
+        return phoneNo;
+    }
 
+    public String getEmail() {
+        return email;
+    }
 }

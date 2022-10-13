@@ -25,9 +25,10 @@ public class AddressBookMain {
                 contactInfo.displayListItems();
             } else if (operation == 2) {
                 contactInfo.editContact();
+                contactInfo.displayListItems();
             } else if (operation == 0) {
                 j = i + 2;
-            }else if (operation==3){
+            } else if (operation == 3) {
                 contactInfo.deleteContact();
             }
         }
