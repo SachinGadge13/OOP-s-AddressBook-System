@@ -1,23 +1,17 @@
 package com.bridgelabz.addressBook;
 
-import java.util.Comparator;
 
 public class Contacts {
 
-    public static Comparator<Contacts> ConNameComparator = (s1, s2) -> {
-        String ContactName1 = s1.getFirstName().toUpperCase();
-        String ContactName2 = s2.getFirstName().toUpperCase();
-        return ContactName1.compareTo(ContactName2);
-    };
 
-    private final String firstName;
-    private final String lastName;
-    private final String address;
-    private final String city;
-    private final String state;
-    private final int zip;
-    private final long phoneNo;
-    private final String email;
+    private  String firstName;
+    private  String lastName;
+    private  String address;
+    private  String city;
+    private  String state;
+    private  int zip;
+    private  long phoneNo;
+    private  String email;
 
     public Contacts(String myFirstName, String myLastName, String myAddress, String myCity, String myState, int myZip, long myPhoneNo, String myEmail) {
         firstName = myFirstName;
@@ -32,6 +26,38 @@ public class Contacts {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+
+    public void setPhoneNo(long phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getLastName() {
