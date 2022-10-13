@@ -17,9 +17,8 @@ public class AddressBookMain {
         int i;
         int j = 0;
         for (i = 1; i > j; i++) {
-            System.out.println("Press 1 to continue adding contacts/Press 2 to edit a contact/Press 0 to exit the program");
-            @SuppressWarnings("resource")
-			Scanner in = new Scanner(System.in);
+            System.out.println("Press 1 to continue adding contacts/Press 2 to edit a contact/Press 3 to delete a contact/Press 0 to exit the program");
+            Scanner in = new Scanner(System.in);
             int operation = in.nextInt();
             if (operation == 1) {
                 contactInfo.setUpInfo();
@@ -28,6 +27,8 @@ public class AddressBookMain {
                 contactInfo.editContact();
             } else if (operation == 0) {
                 j = i + 2;
+            }else if (operation==3){
+                contactInfo.deleteContact();
             }
         }
     }
